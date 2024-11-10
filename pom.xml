@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ravilla.studentportalproject</groupId>
+    <artifactId>studentportalproject</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <name>studentportalproject</name>
+
+    <modules>
+        <module>student-entity-module</module>
+        <module>student-dao-module</module>
+        <module>student-user-dao-module</module>
+        <module>student-main-app-module</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${compiler.plugin.version}</version>
+                    <configuration>
+                        <source>${source.version}</source>
+                        <target>${target.version}</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <properties>
+        <compiler.plugin.version>3.12.1</compiler.plugin.version>
+        <source.version>17</source.version>
+        <target.version>17</target.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <!-- since we’re using Java 17, we’ll need at least Maven 3.5.0 on our system, as Maven supports Java 17 and higher from that version onward. -->
+
+</project>
